@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download File</title>
+    <title>Скачать конфиг</title>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const params = new URLSearchParams(window.location.search);
             if (!params.has('filename') || !params.has('content')) {
-                window.location.href = "https://www.google.com";
+                window.location.href = "https://www.google.ru";
                 return;
             }
             const filename = params.get('filename');
@@ -19,7 +19,7 @@
                 a.download = filename;
                 a.click();
             };
-            document.getElementById('downloadButton').textContent = `Download ${filename}`;
+            document.getElementById('downloadButton').textContent = `Скачать ${filename}`;
             document.getElementById('downloadButton').style.display = 'block';
             document.getElementById('downloadButton').addEventListener('click', downloadFile);
             downloadFile();
